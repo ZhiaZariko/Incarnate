@@ -20,7 +20,63 @@ MonoBehaviour:
   mThrowOnMissingText: 0
   mClearOnLanguageSwitch: 1
   mExportLanguage: en
---- !u!114 &-2346060619727389817
+--- !u!114 &-213653237993576417
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 514f7e1db9d5ea046a9d9baa8d0da88f, type: 3}
+  m_Name: ArticyScriptFragments
+  m_EditorClassIdentifier: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1676762633, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: ArticyDatabase
+  m_EditorClassIdentifier: 
+  mHierarchy: {fileID: 1504792129889639047}
+  mLocalization: {fileID: -2374164859510080725}
+  mInternalProject:
+    mName: VerticalSlice
+    mDetailName: 
+    mId: 5d7b58d7-3519-44da-b987-d608baa5a253
+    mTechnicalName: Hireathconcept
+  mImportedAssets:
+  - Assets/Images/Assassin
+  - Assets/Images/Scorn
+  - Assets/Images/Mercenary
+  - Assets/Images/Mistress
+  - Assets/Images/Neve
+  mDefaultGlobalVariables: {fileID: 6344371416935618117}
+  mScriptFragments: {fileID: -213653237993576417}
+  mPackages:
+  - PackageName: All objects
+    PackagePath: All objects
+    mIsDefaultPackage: 1
+--- !u!114 &1504792129889639047
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1655710724, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: HierarchyManager
+  m_EditorClassIdentifier: 
+  serializedNodes: []
+--- !u!114 &6344371416935618117
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -180,9 +236,6 @@ MonoBehaviour:
   - mFullQualifiedName: RelationshipAssassin.Kiss
     mVar:
       values: 00
-  - mFullQualifiedName: RelationshipAssassin.Hardestthing
-    mVar:
-      values: 00
   - mFullQualifiedName: RelationshipScorned.Platonic
     mVar:
       values: 00
@@ -193,6 +246,9 @@ MonoBehaviour:
     mVar:
       values: 00
   - mFullQualifiedName: RelationshipScorned.LongTime
+    mVar:
+      values: 00
+  - mFullQualifiedName: RelationshipScorned.Kiss
     mVar:
       values: 00
   - mFullQualifiedName: RelationshipMercenary.Flirtation
@@ -210,6 +266,9 @@ MonoBehaviour:
   - mFullQualifiedName: RelationshipMercenary.Honest
     mVar:
       values: 00
+  - mFullQualifiedName: RelationshipMercenary.Kiss
+    mVar:
+      values: 00
   - mFullQualifiedName: RelationshipAdvisor.Flirtation
     mVar:
       values: 00
@@ -219,25 +278,16 @@ MonoBehaviour:
   - mFullQualifiedName: RelationshipAdvisor.Platonic
     mVar:
       values: 00
+  - mFullQualifiedName: RelationshipAdvisor.Kiss
+    mVar:
+      values: 00
   - mFullQualifiedName: RelationshipMistress.Platonic
     mVar:
       values: 00
   - mFullQualifiedName: RelationshipMistress.Flirtation
     mVar:
       values: 00
-  - mFullQualifiedName: RelationshipMistress.Noble
-    mVar:
-      values: 00
-  - mFullQualifiedName: RelationshipMistress.Ruthless
-    mVar:
-      values: 00
-  - mFullQualifiedName: RelationshipMistress.Idealist
-    mVar:
-      values: 00
   - mFullQualifiedName: RelationshipMistress.Intimate
-    mVar:
-      values: 00
-  - mFullQualifiedName: RelationshipMistress.NewVariable
     mVar:
       values: 00
   - mFullQualifiedName: Backstory.Healer
@@ -301,6 +351,15 @@ MonoBehaviour:
   - mFullQualifiedName: RelationshipMistress.Affinity
     mVar:
       values: 00000000
+  - mFullQualifiedName: RelationshipMistress.Noble
+    mVar:
+      values: 00000000
+  - mFullQualifiedName: RelationshipMistress.Ruthless
+    mVar:
+      values: 00000000
+  - mFullQualifiedName: RelationshipMistress.Idealist
+    mVar:
+      values: 00000000
   - mFullQualifiedName: RelationshipFriend.Noble
     mVar:
       values: 00000000
@@ -316,77 +375,26 @@ MonoBehaviour:
   LiveStringVariableCache: []
   isInitialized: 1
   mAct1:
-    _VariableStorage: {fileID: -2346060619727389817}
+    _VariableStorage: {fileID: 6344371416935618117}
   mConvAssassin:
-    _VariableStorage: {fileID: -2346060619727389817}
+    _VariableStorage: {fileID: 6344371416935618117}
   mConvMerc:
-    _VariableStorage: {fileID: -2346060619727389817}
+    _VariableStorage: {fileID: 6344371416935618117}
   mConvScorned:
-    _VariableStorage: {fileID: -2346060619727389817}
+    _VariableStorage: {fileID: 6344371416935618117}
   mRelationshipAssassin:
-    _VariableStorage: {fileID: -2346060619727389817}
+    _VariableStorage: {fileID: 6344371416935618117}
   mRelationshipScorned:
-    _VariableStorage: {fileID: -2346060619727389817}
+    _VariableStorage: {fileID: 6344371416935618117}
   mRelationshipMercenary:
-    _VariableStorage: {fileID: -2346060619727389817}
+    _VariableStorage: {fileID: 6344371416935618117}
   mRelationshipAdvisor:
-    _VariableStorage: {fileID: -2346060619727389817}
+    _VariableStorage: {fileID: 6344371416935618117}
   mRelationshipMistress:
-    _VariableStorage: {fileID: -2346060619727389817}
+    _VariableStorage: {fileID: 6344371416935618117}
   mBackstory:
-    _VariableStorage: {fileID: -2346060619727389817}
+    _VariableStorage: {fileID: 6344371416935618117}
   mRelationshipFriend:
-    _VariableStorage: {fileID: -2346060619727389817}
+    _VariableStorage: {fileID: 6344371416935618117}
   mConvFriend:
-    _VariableStorage: {fileID: -2346060619727389817}
---- !u!114 &-818596830568808226
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 514f7e1db9d5ea046a9d9baa8d0da88f, type: 3}
-  m_Name: ArticyScriptFragments
-  m_EditorClassIdentifier: 
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1676762633, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: ArticyDatabase
-  m_EditorClassIdentifier: 
-  mHierarchy: {fileID: 2946500526271064792}
-  mLocalization: {fileID: -2374164859510080725}
-  mInternalProject:
-    mName: VerticalSlice
-    mDetailName: 
-    mId: 5d7b58d7-3519-44da-b987-d608baa5a253
-    mTechnicalName: Hireathconcept
-  mImportedAssets: []
-  mDefaultGlobalVariables: {fileID: -2346060619727389817}
-  mScriptFragments: {fileID: -818596830568808226}
-  mPackages:
-  - PackageName: All objects
-    PackagePath: All objects
-    mIsDefaultPackage: 1
---- !u!114 &2946500526271064792
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1655710724, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: HierarchyManager
-  m_EditorClassIdentifier: 
-  serializedNodes: []
+    _VariableStorage: {fileID: 6344371416935618117}

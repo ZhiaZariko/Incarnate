@@ -20,7 +20,7 @@ namespace Articy.Hireathconcept.GlobalVariables
 {
     
     
-    [Articy.Unity.ArticyCodeGenerationHashAttribute(637846795860236939)]
+    [Articy.Unity.ArticyCodeGenerationHashAttribute(637847923562170384)]
     public class ArticyScriptFragments : BaseScriptFragments, ISerializationCallbackReceiver
     {
         

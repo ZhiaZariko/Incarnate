@@ -128,7 +128,6 @@ namespace Articy.Hireathconcept.GlobalVariables
             variableNames.Add("RelationshipAssassin.Ruthless");
             variableNames.Add("RelationshipAssassin.Affinity");
             variableNames.Add("RelationshipAssassin.Kiss");
-            variableNames.Add("RelationshipAssassin.Hardestthing");
             variableNames.Add("RelationshipScorned.Idealist");
             variableNames.Add("RelationshipScorned.Ruthless");
             variableNames.Add("RelationshipScorned.Noble");
@@ -137,6 +136,7 @@ namespace Articy.Hireathconcept.GlobalVariables
             variableNames.Add("RelationshipScorned.Flirtation");
             variableNames.Add("RelationshipScorned.Affinity");
             variableNames.Add("RelationshipScorned.LongTime");
+            variableNames.Add("RelationshipScorned.Kiss");
             variableNames.Add("RelationshipMercenary.Flirtation");
             variableNames.Add("RelationshipMercenary.Intimate");
             variableNames.Add("RelationshipMercenary.Platonic");
@@ -146,6 +146,7 @@ namespace Articy.Hireathconcept.GlobalVariables
             variableNames.Add("RelationshipMercenary.Affinity");
             variableNames.Add("RelationshipMercenary.EverythingisManipulation");
             variableNames.Add("RelationshipMercenary.Honest");
+            variableNames.Add("RelationshipMercenary.Kiss");
             variableNames.Add("RelationshipAdvisor.Flirtation");
             variableNames.Add("RelationshipAdvisor.Intimate");
             variableNames.Add("RelationshipAdvisor.Platonic");
@@ -153,6 +154,7 @@ namespace Articy.Hireathconcept.GlobalVariables
             variableNames.Add("RelationshipAdvisor.Ruthless");
             variableNames.Add("RelationshipAdvisor.Idealist");
             variableNames.Add("RelationshipAdvisor.Affinity");
+            variableNames.Add("RelationshipAdvisor.Kiss");
             variableNames.Add("RelationshipMistress.Affinity");
             variableNames.Add("RelationshipMistress.Platonic");
             variableNames.Add("RelationshipMistress.Flirtation");
@@ -160,7 +162,6 @@ namespace Articy.Hireathconcept.GlobalVariables
             variableNames.Add("RelationshipMistress.Ruthless");
             variableNames.Add("RelationshipMistress.Idealist");
             variableNames.Add("RelationshipMistress.Intimate");
-            variableNames.Add("RelationshipMistress.NewVariable");
             variableNames.Add("Backstory.Healer");
             variableNames.Add("Backstory.FriendHealer");
             variableNames.Add("RelationshipFriend.Noble");

@@ -22,7 +22,7 @@ namespace Articy.Hireathconcept
     
     
     [Serializable()]
-    [Articy.Unity.ArticyCodeGenerationHashAttribute(637846656827089481)]
+    [Articy.Unity.ArticyCodeGenerationHashAttribute(637847923456869054)]
     public class InputPin : ArticyPrimitive, IInputPin
     {
         

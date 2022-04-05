@@ -264,6 +264,15 @@ namespace Articy.Hireathconcept
     
     
     [Serializable()]
+    public class ArticyValueAsset : ArticyValue<Asset>
+    {
+    }
+}
+namespace Articy.Hireathconcept
+{
+    
+    
+    [Serializable()]
     public class ArticyValueCondition : ArticyValue<Condition>
     {
     }

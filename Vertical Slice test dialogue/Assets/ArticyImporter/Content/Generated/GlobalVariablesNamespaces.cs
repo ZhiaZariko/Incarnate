@@ -19,6 +19,7 @@ namespace Articy.Hireathconcept.GlobalVariables
 {
     
     
+    // Act 1 Narrative progression trackers
     [Serializable()]
     public class Act1 : IArticyNamespace
     {
@@ -162,6 +163,7 @@ namespace Articy.Hireathconcept.GlobalVariables
 {
     
     
+    // Assassin Conversational Trackers Used to track narrative points within dialogue as distinct from releationship checks.
     [Serializable()]
     public class ConvAssassin : IArticyNamespace
     {
@@ -445,6 +447,7 @@ namespace Articy.Hireathconcept.GlobalVariables
 {
     
     
+    // Mercenary Conversational trackers. Used to track narrative points within dialogue as distinct from releationship checks.
     [Serializable()]
     public class ConvMerc : IArticyNamespace
     {
@@ -630,6 +633,7 @@ namespace Articy.Hireathconcept.GlobalVariables
 {
     
     
+    // Scorned conversational trackers. Used to track narrative points within dialogue as distinct from releationship checks.
     [Serializable()]
     public class ConvScorned : IArticyNamespace
     {
@@ -717,6 +721,7 @@ namespace Articy.Hireathconcept.GlobalVariables
 {
     
     
+    // Assassin relationship trackers. Used to track the state of the relationship with the character.
     [Serializable()]
     public class RelationshipAssassin : IArticyNamespace
     {
@@ -763,7 +768,7 @@ namespace Articy.Hireathconcept.GlobalVariables
             }
         }
         
-        // Assassin's Noble score
+        // Saviran's Noble score in this relationship
         public int Noble
         {
             get
@@ -776,7 +781,7 @@ namespace Articy.Hireathconcept.GlobalVariables
             }
         }
         
-        // Assassin's Idealist score
+        // Saviran's Idealist score in this relationship
         public int Idealist
         {
             get
@@ -789,7 +794,7 @@ namespace Articy.Hireathconcept.GlobalVariables
             }
         }
         
-        // Assassin's Ruthless score
+        // Saviran's Ruthless score in this relationship
         public int Ruthless
         {
             get
@@ -802,7 +807,7 @@ namespace Articy.Hireathconcept.GlobalVariables
             }
         }
         
-        // Assassin's Affinity score
+        // Saviran's affinity score with this character.
         public int Affinity
         {
             get
@@ -815,7 +820,7 @@ namespace Articy.Hireathconcept.GlobalVariables
             }
         }
         
-        // 
+        // Saviran and the Assassin have shared their first kiss.
         public bool Kiss
         {
             get
@@ -825,19 +830,6 @@ namespace Articy.Hireathconcept.GlobalVariables
             set
             {
                 _VariableStorage.Internal_SetVariableValueBoolean(48, value);
-            }
-        }
-        
-        // 
-        public bool Hardestthing
-        {
-            get
-            {
-                return _VariableStorage.Internal_GetVariableValueBoolean(49);
-            }
-            set
-            {
-                _VariableStorage.Internal_SetVariableValueBoolean(49, value);
             }
         }
         
@@ -852,7 +844,6 @@ namespace Articy.Hireathconcept.GlobalVariables
             aStorage.RegisterVariable("RelationshipAssassin.Ruthless", 0);
             aStorage.RegisterVariable("RelationshipAssassin.Affinity", 0);
             aStorage.RegisterVariable("RelationshipAssassin.Kiss", false);
-            aStorage.RegisterVariable("RelationshipAssassin.Hardestthing", false);
         }
     }
 }
@@ -860,6 +851,7 @@ namespace Articy.Hireathconcept.GlobalVariables
 {
     
     
+    // Scorned relationship tracker. Used to track the state of the relationship with the character.
     [Serializable()]
     public class RelationshipScorned : IArticyNamespace
     {
@@ -867,7 +859,7 @@ namespace Articy.Hireathconcept.GlobalVariables
         [SerializeField()]
         private BaseGlobalVariables _VariableStorage;
         
-        // Scorned's Idealist score
+        // Saviran's Idealist score in this relationship
         public int Idealist
         {
             get
@@ -880,7 +872,7 @@ namespace Articy.Hireathconcept.GlobalVariables
             }
         }
         
-        // Scorned's Ruthless score
+        // Saviran's Ruthless score in this relationship
         public int Ruthless
         {
             get
@@ -893,7 +885,7 @@ namespace Articy.Hireathconcept.GlobalVariables
             }
         }
         
-        // Scorned's Noble score
+        // Saviran's Noble score in this relationship
         public int Noble
         {
             get
@@ -911,6 +903,19 @@ namespace Articy.Hireathconcept.GlobalVariables
         {
             get
             {
+                return _VariableStorage.Internal_GetVariableValueBoolean(49);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(49, value);
+            }
+        }
+        
+        // Saviran has been intimate with the Scorned
+        public bool Intimate
+        {
+            get
+            {
                 return _VariableStorage.Internal_GetVariableValueBoolean(50);
             }
             set
@@ -919,8 +924,8 @@ namespace Articy.Hireathconcept.GlobalVariables
             }
         }
         
-        // Saviran has been intimate with the Scorned
-        public bool Intimate
+        // Saviran has started flirting with the Scorned
+        public bool Flirtation
         {
             get
             {
@@ -932,20 +937,7 @@ namespace Articy.Hireathconcept.GlobalVariables
             }
         }
         
-        // Saviran has started flirting with the Scorned
-        public bool Flirtation
-        {
-            get
-            {
-                return _VariableStorage.Internal_GetVariableValueBoolean(52);
-            }
-            set
-            {
-                _VariableStorage.Internal_SetVariableValueBoolean(52, value);
-            }
-        }
-        
-        // Scorned's Affinity score
+        // Saviran's affinity score with this character.
         public int Affinity
         {
             get
@@ -960,6 +952,19 @@ namespace Articy.Hireathconcept.GlobalVariables
         
         // Narrative beat
         public bool LongTime
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(52);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(52, value);
+            }
+        }
+        
+        // Saviran and the Scorned have kissed (I guess?)
+        public bool Kiss
         {
             get
             {
@@ -982,6 +987,7 @@ namespace Articy.Hireathconcept.GlobalVariables
             aStorage.RegisterVariable("RelationshipScorned.Flirtation", false);
             aStorage.RegisterVariable("RelationshipScorned.Affinity", 0);
             aStorage.RegisterVariable("RelationshipScorned.LongTime", false);
+            aStorage.RegisterVariable("RelationshipScorned.Kiss", false);
         }
     }
 }
@@ -989,6 +995,7 @@ namespace Articy.Hireathconcept.GlobalVariables
 {
     
     
+    // Mercenary relationship tracker. Used to track the state of the relationship with the character.
     [Serializable()]
     public class RelationshipMercenary : IArticyNamespace
     {
@@ -1035,7 +1042,7 @@ namespace Articy.Hireathconcept.GlobalVariables
             }
         }
         
-        // Mercenary's Noble score
+        // Saviran's Noble score in this relationship
         public int Noble
         {
             get
@@ -1048,7 +1055,7 @@ namespace Articy.Hireathconcept.GlobalVariables
             }
         }
         
-        // Mecenary's Ruthless score
+        // Saviran's Ruthless score in this relationship
         public int Ruthless
         {
             get
@@ -1061,7 +1068,7 @@ namespace Articy.Hireathconcept.GlobalVariables
             }
         }
         
-        // Mercenary's Idealist score
+        // Saviran's Idealist score in this relationship
         public int Idealist
         {
             get
@@ -1074,7 +1081,7 @@ namespace Articy.Hireathconcept.GlobalVariables
             }
         }
         
-        // Mercenary's Affinity score
+        // Saviran's affinity score with this character.
         public int Affinity
         {
             get
@@ -1113,6 +1120,19 @@ namespace Articy.Hireathconcept.GlobalVariables
             }
         }
         
+        // Saviran and the Mercenary have shared their first kiss.
+        public bool Kiss
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(59);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(59, value);
+            }
+        }
+        
         public void RegisterVariables(BaseGlobalVariables aStorage)
         {
             _VariableStorage = aStorage;
@@ -1125,6 +1145,7 @@ namespace Articy.Hireathconcept.GlobalVariables
             aStorage.RegisterVariable("RelationshipMercenary.Affinity", 0);
             aStorage.RegisterVariable("RelationshipMercenary.EverythingisManipulation", false);
             aStorage.RegisterVariable("RelationshipMercenary.Honest", false);
+            aStorage.RegisterVariable("RelationshipMercenary.Kiss", false);
         }
     }
 }
@@ -1132,6 +1153,7 @@ namespace Articy.Hireathconcept.GlobalVariables
 {
     
     
+    // Advisor Relationship trackers. Used to track the state of the relationship with the character.
     [Serializable()]
     public class RelationshipAdvisor : IArticyNamespace
     {
@@ -1144,19 +1166,6 @@ namespace Articy.Hireathconcept.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(59);
-            }
-            set
-            {
-                _VariableStorage.Internal_SetVariableValueBoolean(59, value);
-            }
-        }
-        
-        // 
-        public bool Intimate
-        {
-            get
-            {
                 return _VariableStorage.Internal_GetVariableValueBoolean(60);
             }
             set
@@ -1165,8 +1174,8 @@ namespace Articy.Hireathconcept.GlobalVariables
             }
         }
         
-        // 
-        public bool Platonic
+        // Saviran and the Advisor have become intimate
+        public bool Intimate
         {
             get
             {
@@ -1178,7 +1187,20 @@ namespace Articy.Hireathconcept.GlobalVariables
             }
         }
         
-        // 
+        // Saviran has asked for the relationship to be non-sexual
+        public bool Platonic
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(62);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(62, value);
+            }
+        }
+        
+        // Saviran's Noble score in this relationship
         public int Noble
         {
             get
@@ -1191,7 +1213,7 @@ namespace Articy.Hireathconcept.GlobalVariables
             }
         }
         
-        // 
+        // Saviran's Ruthless score in this relationship
         public int Ruthless
         {
             get
@@ -1204,7 +1226,7 @@ namespace Articy.Hireathconcept.GlobalVariables
             }
         }
         
-        // 
+        // Saviran's Idealist score in this relationship
         public int Idealist
         {
             get
@@ -1217,7 +1239,7 @@ namespace Articy.Hireathconcept.GlobalVariables
             }
         }
         
-        // 
+        // Saviran's affinity score with this character.
         public int Affinity
         {
             get
@@ -1227,6 +1249,19 @@ namespace Articy.Hireathconcept.GlobalVariables
             set
             {
                 _VariableStorage.Internal_SetVariableValueInt32(15, value);
+            }
+        }
+        
+        // Saviran and the Advisor have kissed
+        public bool Kiss
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(63);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(63, value);
             }
         }
         
@@ -1240,6 +1275,7 @@ namespace Articy.Hireathconcept.GlobalVariables
             aStorage.RegisterVariable("RelationshipAdvisor.Ruthless", 0);
             aStorage.RegisterVariable("RelationshipAdvisor.Idealist", 0);
             aStorage.RegisterVariable("RelationshipAdvisor.Affinity", 0);
+            aStorage.RegisterVariable("RelationshipAdvisor.Kiss", false);
         }
     }
 }
@@ -1247,6 +1283,7 @@ namespace Articy.Hireathconcept.GlobalVariables
 {
     
     
+    // Mistress relationship tracker. Used to track the state of the relationship with the character.
     [Serializable()]
     public class RelationshipMistress : IArticyNamespace
     {
@@ -1254,7 +1291,7 @@ namespace Articy.Hireathconcept.GlobalVariables
         [SerializeField()]
         private BaseGlobalVariables _VariableStorage;
         
-        // Mistress' affinity score
+        // Saviran's affinity score with this character.
         public int Affinity
         {
             get
@@ -1272,32 +1309,6 @@ namespace Articy.Hireathconcept.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(62);
-            }
-            set
-            {
-                _VariableStorage.Internal_SetVariableValueBoolean(62, value);
-            }
-        }
-        
-        // Saviran has flirted with the Mistress
-        public bool Flirtation
-        {
-            get
-            {
-                return _VariableStorage.Internal_GetVariableValueBoolean(63);
-            }
-            set
-            {
-                _VariableStorage.Internal_SetVariableValueBoolean(63, value);
-            }
-        }
-        
-        // Mistress' Noble score
-        public bool Noble
-        {
-            get
-            {
                 return _VariableStorage.Internal_GetVariableValueBoolean(64);
             }
             set
@@ -1306,8 +1317,8 @@ namespace Articy.Hireathconcept.GlobalVariables
             }
         }
         
-        // Mistress' Ruthless score
-        public bool Ruthless
+        // Saviran has flirted with the Mistress
+        public bool Flirtation
         {
             get
             {
@@ -1319,8 +1330,47 @@ namespace Articy.Hireathconcept.GlobalVariables
             }
         }
         
-        // Mistress' Idealist score
-        public bool Idealist
+        // Saviran's Noble score in this relationship
+        public int Noble
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueInt32(17);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueInt32(17, value);
+            }
+        }
+        
+        // Saviran's Ruthless score in this relationship
+        public int Ruthless
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueInt32(18);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueInt32(18, value);
+            }
+        }
+        
+        // Saviran's Idealist score in this relationship
+        public int Idealist
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueInt32(19);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueInt32(19, value);
+            }
+        }
+        
+        // Saviran has been intimate with the Mistress
+        public bool Intimate
         {
             get
             {
@@ -1332,8 +1382,33 @@ namespace Articy.Hireathconcept.GlobalVariables
             }
         }
         
-        // Saviran has been intimate with the Mistress
-        public bool Intimate
+        public void RegisterVariables(BaseGlobalVariables aStorage)
+        {
+            _VariableStorage = aStorage;
+            aStorage.RegisterVariable("RelationshipMistress.Affinity", 0);
+            aStorage.RegisterVariable("RelationshipMistress.Platonic", false);
+            aStorage.RegisterVariable("RelationshipMistress.Flirtation", false);
+            aStorage.RegisterVariable("RelationshipMistress.Noble", 0);
+            aStorage.RegisterVariable("RelationshipMistress.Ruthless", 0);
+            aStorage.RegisterVariable("RelationshipMistress.Idealist", 0);
+            aStorage.RegisterVariable("RelationshipMistress.Intimate", false);
+        }
+    }
+}
+namespace Articy.Hireathconcept.GlobalVariables
+{
+    
+    
+    // Saviran Backstory Trackers
+    [Serializable()]
+    public class Backstory : IArticyNamespace
+    {
+        
+        [SerializeField()]
+        private BaseGlobalVariables _VariableStorage;
+        
+        // Saviran has noted that they have healing magic
+        public bool Healer
         {
             get
             {
@@ -1345,8 +1420,8 @@ namespace Articy.Hireathconcept.GlobalVariables
             }
         }
         
-        // 
-        public bool NewVariable
+        // Saviran has noted their friend is a healer
+        public bool FriendHealer
         {
             get
             {
@@ -1355,57 +1430,6 @@ namespace Articy.Hireathconcept.GlobalVariables
             set
             {
                 _VariableStorage.Internal_SetVariableValueBoolean(68, value);
-            }
-        }
-        
-        public void RegisterVariables(BaseGlobalVariables aStorage)
-        {
-            _VariableStorage = aStorage;
-            aStorage.RegisterVariable("RelationshipMistress.Affinity", 0);
-            aStorage.RegisterVariable("RelationshipMistress.Platonic", false);
-            aStorage.RegisterVariable("RelationshipMistress.Flirtation", false);
-            aStorage.RegisterVariable("RelationshipMistress.Noble", false);
-            aStorage.RegisterVariable("RelationshipMistress.Ruthless", false);
-            aStorage.RegisterVariable("RelationshipMistress.Idealist", false);
-            aStorage.RegisterVariable("RelationshipMistress.Intimate", false);
-            aStorage.RegisterVariable("RelationshipMistress.NewVariable", false);
-        }
-    }
-}
-namespace Articy.Hireathconcept.GlobalVariables
-{
-    
-    
-    [Serializable()]
-    public class Backstory : IArticyNamespace
-    {
-        
-        [SerializeField()]
-        private BaseGlobalVariables _VariableStorage;
-        
-        // 
-        public bool Healer
-        {
-            get
-            {
-                return _VariableStorage.Internal_GetVariableValueBoolean(69);
-            }
-            set
-            {
-                _VariableStorage.Internal_SetVariableValueBoolean(69, value);
-            }
-        }
-        
-        // 
-        public bool FriendHealer
-        {
-            get
-            {
-                return _VariableStorage.Internal_GetVariableValueBoolean(70);
-            }
-            set
-            {
-                _VariableStorage.Internal_SetVariableValueBoolean(70, value);
             }
         }
         
@@ -1421,6 +1445,7 @@ namespace Articy.Hireathconcept.GlobalVariables
 {
     
     
+    // Friend relationship trackers. Used to track the state of the relationship with the character.
     [Serializable()]
     public class RelationshipFriend : IArticyNamespace
     {
@@ -1428,42 +1453,42 @@ namespace Articy.Hireathconcept.GlobalVariables
         [SerializeField()]
         private BaseGlobalVariables _VariableStorage;
         
-        // 
+        // Saviran's Noble score in this relationship
         public int Noble
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueInt32(17);
+                return _VariableStorage.Internal_GetVariableValueInt32(20);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueInt32(17, value);
+                _VariableStorage.Internal_SetVariableValueInt32(20, value);
             }
         }
         
-        // 
+        // Saviran's Idealist score in this relationship
         public int Idealist
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueInt32(18);
+                return _VariableStorage.Internal_GetVariableValueInt32(21);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueInt32(18, value);
+                _VariableStorage.Internal_SetVariableValueInt32(21, value);
             }
         }
         
-        // 
+        // Saviran's Ruthless score in this relationship
         public int Ruthless
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueInt32(19);
+                return _VariableStorage.Internal_GetVariableValueInt32(22);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueInt32(19, value);
+                _VariableStorage.Internal_SetVariableValueInt32(22, value);
             }
         }
         
@@ -1480,6 +1505,7 @@ namespace Articy.Hireathconcept.GlobalVariables
 {
     
     
+    // Friend Conversational Trackers Used to track narrative points within dialogue as distinct from releationship checks.
     [Serializable()]
     public class ConvFriend : IArticyNamespace
     {
@@ -1492,11 +1518,11 @@ namespace Articy.Hireathconcept.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(71);
+                return _VariableStorage.Internal_GetVariableValueBoolean(69);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(71, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(69, value);
             }
         }
         
