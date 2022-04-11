@@ -84,7 +84,7 @@ namespace Articy.Hireathconcept.GlobalVariables
             variableNames.Add("Act1.NewVariable");
             variableNames.Add("Act1.MistressEmpath");
             variableNames.Add("Act1.RefuseBodyguard");
-            variableNames.Add("ConvAssassin.AssassinConvo");
+            variableNames.Add("ConvAssassin.Conversation1");
             variableNames.Add("ConvAssassin.ConvPoint11");
             variableNames.Add("ConvAssassin.ConvPoint12");
             variableNames.Add("ConvAssassin.ConvPoint14");
@@ -103,8 +103,12 @@ namespace Articy.Hireathconcept.GlobalVariables
             variableNames.Add("ConvAssassin.Unchained");
             variableNames.Add("ConvAssassin.Floor");
             variableNames.Add("ConvAssassin.Getup");
+            variableNames.Add("ConvAssassin.Convo12");
+            variableNames.Add("ConvAssassin.Conversation2");
+            variableNames.Add("ConvAssassin.Leaving");
+            variableNames.Add("ConvAssassin.WorkOn");
             variableNames.Add("ConvMerc.Spawn");
-            variableNames.Add("ConvMerc.MercConvo");
+            variableNames.Add("ConvMerc.Conversation1");
             variableNames.Add("ConvMerc.Flirtation");
             variableNames.Add("ConvMerc.Bond");
             variableNames.Add("ConvMerc.Wantthosethings");
@@ -115,10 +119,14 @@ namespace Articy.Hireathconcept.GlobalVariables
             variableNames.Add("ConvMerc.AssassinQ");
             variableNames.Add("ConvMerc.InThePit");
             variableNames.Add("ConvMerc.BuildReputation");
-            variableNames.Add("ConvScorned.ScornedConvo");
+            variableNames.Add("ConvMerc.Leaving");
+            variableNames.Add("ConvMerc.Conversation2");
+            variableNames.Add("ConvScorned.Conversation1");
             variableNames.Add("ConvScorned.Convo1End");
             variableNames.Add("ConvScorned.Flirtation");
             variableNames.Add("ConvScorned.Forging");
+            variableNames.Add("ConvScorned.Leaving");
+            variableNames.Add("ConvScorned.Conversation2");
             variableNames.Add("ConvScorned.Facecovered");
             variableNames.Add("RelationshipAssassin.Flirtation");
             variableNames.Add("RelationshipAssassin.Intimate");
@@ -168,6 +176,7 @@ namespace Articy.Hireathconcept.GlobalVariables
             variableNames.Add("RelationshipFriend.Idealist");
             variableNames.Add("RelationshipFriend.Ruthless");
             variableNames.Add("ConvFriend.AskedToLead");
+            variableNames.Add("ConvFriend.Hug");
         }
         #endregion
         

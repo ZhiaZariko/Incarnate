@@ -264,6 +264,51 @@ namespace Articy.Hireathconcept
     
     
     [Serializable()]
+    public class ArticyValueLocation : ArticyValue<Location>
+    {
+    }
+}
+namespace Articy.Hireathconcept
+{
+    
+    
+    [Serializable()]
+    public class ArticyValueSpot : ArticyValue<Spot>
+    {
+    }
+}
+namespace Articy.Hireathconcept
+{
+    
+    
+    [Serializable()]
+    public class ArticyValueZone : ArticyValue<Zone>
+    {
+    }
+}
+namespace Articy.Hireathconcept
+{
+    
+    
+    [Serializable()]
+    public class ArticyValuePath : ArticyValue<Path>
+    {
+    }
+}
+namespace Articy.Hireathconcept
+{
+    
+    
+    [Serializable()]
+    public class ArticyValueLink : ArticyValue<Link>
+    {
+    }
+}
+namespace Articy.Hireathconcept
+{
+    
+    
+    [Serializable()]
     public class ArticyValueAsset : ArticyValue<Asset>
     {
     }
@@ -291,6 +336,24 @@ namespace Articy.Hireathconcept
     
     
     [Serializable()]
+    public class ArticyValueLocationText : ArticyValue<LocationText>
+    {
+    }
+}
+namespace Articy.Hireathconcept
+{
+    
+    
+    [Serializable()]
+    public class ArticyValueLocationImage : ArticyValue<LocationImage>
+    {
+    }
+}
+namespace Articy.Hireathconcept
+{
+    
+    
+    [Serializable()]
     public class ArticyValueDocument : ArticyValue<Document>
     {
     }
@@ -301,6 +364,15 @@ namespace Articy.Hireathconcept
     
     [Serializable()]
     public class ArticyValueTextObject : ArticyValue<TextObject>
+    {
+    }
+}
+namespace Articy.Hireathconcept
+{
+    
+    
+    [Serializable()]
+    public class ArticyValueUserFolder : ArticyValue<UserFolder>
     {
     }
 }
@@ -328,6 +400,24 @@ namespace Articy.Hireathconcept
     
     [Serializable()]
     public class ArticyValueListOutputPin : ArticyValue<System.Collections.Generic.List<OutputPin>>
+    {
+    }
+}
+namespace Articy.Hireathconcept
+{
+    
+    
+    [Serializable()]
+    public class ArticyValueListVector2 : ArticyValue<System.Collections.Generic.List<Vector2>>
+    {
+    }
+}
+namespace Articy.Hireathconcept
+{
+    
+    
+    [Serializable()]
+    public class ArticyValueListLocationAnchor : ArticyValue<System.Collections.Generic.List<LocationAnchor>>
     {
     }
 }

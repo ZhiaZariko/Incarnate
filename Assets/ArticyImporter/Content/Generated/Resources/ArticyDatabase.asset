@@ -1,5 +1,24 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8342733230847103724
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1655710724, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: HierarchyManager
+  m_EditorClassIdentifier: 
+  serializedNodes:
+  - id: 72057594037927937
+    parent: 0
+    technicalName: Hireathconcept
+    articyType: Project
+    childCount: 0
+    indexOfFirstChild: 1
 --- !u!114 &-2374164859510080725
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -20,52 +39,7 @@ MonoBehaviour:
   mThrowOnMissingText: 0
   mClearOnLanguageSwitch: 1
   mExportLanguage: en
---- !u!114 &-213653237993576417
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 514f7e1db9d5ea046a9d9baa8d0da88f, type: 3}
-  m_Name: ArticyScriptFragments
-  m_EditorClassIdentifier: 
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1676762633, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: ArticyDatabase
-  m_EditorClassIdentifier: 
-  mHierarchy: {fileID: 8583757983671178730}
-  mLocalization: {fileID: -2374164859510080725}
-  mInternalProject:
-    mName: VerticalSlice
-    mDetailName: 
-    mId: 5d7b58d7-3519-44da-b987-d608baa5a253
-    mTechnicalName: Hireathconcept
-  mImportedAssets:
-  - Assets/Images/Assassin
-  - Assets/Images/Scorn
-  - Assets/Images/Mercenary
-  - Assets/Images/Mistress
-  - Assets/Images/Neve
-  - Assets/Images/Silhouette
-  - Assets/Images/Purple_Light
-  mDefaultGlobalVariables: {fileID: 6344371416935618117}
-  mScriptFragments: {fileID: -213653237993576417}
-  mPackages:
-  - PackageName: All objects
-    PackagePath: All objects
-    mIsDefaultPackage: 1
---- !u!114 &6344371416935618117
+--- !u!114 &-2093399457349299362
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -105,7 +79,7 @@ MonoBehaviour:
   - mFullQualifiedName: Act1.RefuseBodyguard
     mVar:
       values: 00
-  - mFullQualifiedName: ConvAssassin.AssassinConvo
+  - mFullQualifiedName: ConvAssassin.Conversation1
     mVar:
       values: 00
   - mFullQualifiedName: ConvAssassin.ConvPoint11
@@ -162,10 +136,22 @@ MonoBehaviour:
   - mFullQualifiedName: ConvAssassin.Getup
     mVar:
       values: 00
+  - mFullQualifiedName: ConvAssassin.Convo12
+    mVar:
+      values: 00
+  - mFullQualifiedName: ConvAssassin.Conversation2
+    mVar:
+      values: 00
+  - mFullQualifiedName: ConvAssassin.Leaving
+    mVar:
+      values: 00
+  - mFullQualifiedName: ConvAssassin.WorkOn
+    mVar:
+      values: 00
   - mFullQualifiedName: ConvMerc.Spawn
     mVar:
       values: 00
-  - mFullQualifiedName: ConvMerc.MercConvo
+  - mFullQualifiedName: ConvMerc.Conversation1
     mVar:
       values: 00
   - mFullQualifiedName: ConvMerc.Flirtation
@@ -198,7 +184,13 @@ MonoBehaviour:
   - mFullQualifiedName: ConvMerc.BuildReputation
     mVar:
       values: 00
-  - mFullQualifiedName: ConvScorned.ScornedConvo
+  - mFullQualifiedName: ConvMerc.Leaving
+    mVar:
+      values: 00
+  - mFullQualifiedName: ConvMerc.Conversation2
+    mVar:
+      values: 00
+  - mFullQualifiedName: ConvScorned.Conversation1
     mVar:
       values: 00
   - mFullQualifiedName: ConvScorned.Convo1End
@@ -208,6 +200,12 @@ MonoBehaviour:
     mVar:
       values: 00
   - mFullQualifiedName: ConvScorned.Forging
+    mVar:
+      values: 00
+  - mFullQualifiedName: ConvScorned.Leaving
+    mVar:
+      values: 00
+  - mFullQualifiedName: ConvScorned.Conversation2
     mVar:
       values: 00
   - mFullQualifiedName: ConvScorned.Facecovered
@@ -288,6 +286,9 @@ MonoBehaviour:
   - mFullQualifiedName: ConvFriend.AskedToLead
     mVar:
       values: 00
+  - mFullQualifiedName: ConvFriend.Hug
+    mVar:
+      values: 00
   IntVariableCache:
   - mFullQualifiedName: RelationshipAssassin.Noble
     mVar:
@@ -364,30 +365,30 @@ MonoBehaviour:
   LiveStringVariableCache: []
   isInitialized: 1
   mAct1:
-    _VariableStorage: {fileID: 6344371416935618117}
+    _VariableStorage: {fileID: -2093399457349299362}
   mConvAssassin:
-    _VariableStorage: {fileID: 6344371416935618117}
+    _VariableStorage: {fileID: -2093399457349299362}
   mConvMerc:
-    _VariableStorage: {fileID: 6344371416935618117}
+    _VariableStorage: {fileID: -2093399457349299362}
   mConvScorned:
-    _VariableStorage: {fileID: 6344371416935618117}
+    _VariableStorage: {fileID: -2093399457349299362}
   mRelationshipAssassin:
-    _VariableStorage: {fileID: 6344371416935618117}
+    _VariableStorage: {fileID: -2093399457349299362}
   mRelationshipScorned:
-    _VariableStorage: {fileID: 6344371416935618117}
+    _VariableStorage: {fileID: -2093399457349299362}
   mRelationshipMercenary:
-    _VariableStorage: {fileID: 6344371416935618117}
+    _VariableStorage: {fileID: -2093399457349299362}
   mRelationshipAdvisor:
-    _VariableStorage: {fileID: 6344371416935618117}
+    _VariableStorage: {fileID: -2093399457349299362}
   mRelationshipMistress:
-    _VariableStorage: {fileID: 6344371416935618117}
+    _VariableStorage: {fileID: -2093399457349299362}
   mBackstory:
-    _VariableStorage: {fileID: 6344371416935618117}
+    _VariableStorage: {fileID: -2093399457349299362}
   mRelationshipFriend:
-    _VariableStorage: {fileID: 6344371416935618117}
+    _VariableStorage: {fileID: -2093399457349299362}
   mConvFriend:
-    _VariableStorage: {fileID: 6344371416935618117}
---- !u!114 &8583757983671178730
+    _VariableStorage: {fileID: -2093399457349299362}
+--- !u!114 &-1576699170447460177
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -396,7 +397,42 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1655710724, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: HierarchyManager
+  m_Script: {fileID: 11500000, guid: 514f7e1db9d5ea046a9d9baa8d0da88f, type: 3}
+  m_Name: ArticyScriptFragments
   m_EditorClassIdentifier: 
-  serializedNodes: []
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1676762633, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: ArticyDatabase
+  m_EditorClassIdentifier: 
+  mHierarchy: {fileID: -8342733230847103724}
+  mLocalization: {fileID: -2374164859510080725}
+  mInternalProject:
+    mName: VerticalSlice
+    mDetailName: 
+    mId: 5d7b58d7-3519-44da-b987-d608baa5a253
+    mTechnicalName: Hireathconcept
+  mImportedAssets:
+  - Assets/Images/Assassin
+  - Assets/Images/Scorn
+  - Assets/Images/Mercenary
+  - Assets/Images/Mistress
+  - Assets/Images/Neve
+  - Assets/Images/Silhouette
+  - Assets/Images/Purple_Light
+  - Assets/Images/Merc2
+  - Assets/Images/scorned
+  - Assets/Images/Friend
+  mDefaultGlobalVariables: {fileID: -2093399457349299362}
+  mScriptFragments: {fileID: -1576699170447460177}
+  mPackages:
+  - PackageName: Export package
+    PackagePath: Export package
+    mIsDefaultPackage: 1
