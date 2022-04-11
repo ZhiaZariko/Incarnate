@@ -28,6 +28,9 @@ public class ArticyDebugFlowPlayer : MonoBehaviour, IArticyFlowPlayerCallbacks
 
 	// the preview image ui element. A simple 64x64 image that will show the articy preview image or speaker, depending on the current pause.
 	public Image previewImagePanel;
+	public Image previewMCPanel;
+
+	public Text SpeakerName;
 
 	[Header("Options")]
 	// you can set this to true to see false branches in red, very helpful for debugging.
@@ -35,6 +38,8 @@ public class ArticyDebugFlowPlayer : MonoBehaviour, IArticyFlowPlayerCallbacks
 	
 	// the flow player component found on this game object
 	private ArticyFlowPlayer flowPlayer;
+
+	private string speakerDisplayName;
 
 	// Used to initializes our debug flow player handler.
 	void Start()
@@ -129,12 +134,17 @@ public class ArticyDebugFlowPlayer : MonoBehaviour, IArticyFlowPlayerCallbacks
 
 		previewImagePanel.sprite = null;
 
+		speakerDisplayName = "";
+
 		// to figure out which asset we could show in our preview, we first try to see if it is an object with a speaker
 		var dlgSpeaker = aObject as IObjectWithSpeaker;
 		if (dlgSpeaker != null)
 		{
 			// if we have a speaker, we extract it, because now we have to check if it has a preview image.
 			ArticyObject speaker = dlgSpeaker.Speaker;
+			var speakerName = speaker as IObjectWithDisplayName;
+			speakerDisplayName = speakerName.DisplayName;
+			Debug.Log(speakerDisplayName);
 			if (speaker != null)
 			{
 				var speakerWithPreviewImage = speaker as IObjectWithPreviewImage;
@@ -142,7 +152,7 @@ public class ArticyDebugFlowPlayer : MonoBehaviour, IArticyFlowPlayerCallbacks
 				{
 					// our speaker has the property for preview image and we assign it to our asset.
 					articyAsset = speakerWithPreviewImage.PreviewImage.Asset;
-				}
+				} 
 			}
 		}
 
@@ -156,10 +166,20 @@ public class ArticyDebugFlowPlayer : MonoBehaviour, IArticyFlowPlayerCallbacks
 			}
 		}
 
+		SpeakerName.text = speakerDisplayName;
+
 		// and if we have an asset at this point, we load it as a sprite and show it in our ui image.
-		if (articyAsset != null)
+		if (articyAsset != null && speakerDisplayName != "" && speakerDisplayName != "Saviran")
 		{
+			previewImagePanel.gameObject.SetActive(true);
+			previewMCPanel.gameObject.SetActive(false);
 			previewImagePanel.sprite = articyAsset.LoadAssetAsSprite();
+		} else if (speakerDisplayName == "Saviran") {
+			previewImagePanel.gameObject.SetActive(false);
+			previewMCPanel.gameObject.SetActive(true);
+		} else {
+			previewImagePanel.gameObject.SetActive(false);
+			previewMCPanel.gameObject.SetActive(false);
 		}
 	}
 

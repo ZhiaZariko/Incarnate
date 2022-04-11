@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mUsedImportFile: Assets/VerticalSlice.articyu3d
   mUsedLocalizationPath: 
-  mSCMIgnoreState: 0
+  mSCMIgnoreState: 1
   mShowObjectsInDatabaseView: 1
   mLastPluginVersion: 2.3.3.39314
   mUpdateHierarchyInOptimizedPath: 0
