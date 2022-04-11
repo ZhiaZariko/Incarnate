@@ -177,6 +177,9 @@ public class ArticyDebugFlowPlayer : MonoBehaviour, IArticyFlowPlayerCallbacks
 		} else if (speakerDisplayName == "Saviran") {
 			previewImagePanel.gameObject.SetActive(false);
 			previewMCPanel.gameObject.SetActive(true);
+			if (articyAsset != null) {
+				previewMCPanel.sprite = articyAsset.LoadAssetAsSprite();
+			}
 		} else {
 			previewImagePanel.gameObject.SetActive(false);
 			previewMCPanel.gameObject.SetActive(false);
