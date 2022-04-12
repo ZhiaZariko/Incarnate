@@ -143,8 +143,10 @@ public class ArticyDebugFlowPlayer : MonoBehaviour, IArticyFlowPlayerCallbacks
 			// if we have a speaker, we extract it, because now we have to check if it has a preview image.
 			ArticyObject speaker = dlgSpeaker.Speaker;
 			var speakerName = speaker as IObjectWithDisplayName;
-			speakerDisplayName = speakerName.DisplayName;
-			Debug.Log(speakerDisplayName);
+			if (speakerName != null)
+			{
+				speakerDisplayName = speakerName.DisplayName;
+			}
 			if (speaker != null)
 			{
 				var speakerWithPreviewImage = speaker as IObjectWithPreviewImage;
