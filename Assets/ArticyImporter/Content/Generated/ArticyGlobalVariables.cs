@@ -62,6 +62,10 @@ namespace Articy.Hireathconcept.GlobalVariables
         
         [SerializeField()]
         [HideInInspector()]
+        private ConvAdvisor mConvAdvisor = new ConvAdvisor();
+        
+        [SerializeField()]
+        [HideInInspector()]
         private Backstory mBackstory = new Backstory();
         
         [SerializeField()]
@@ -84,6 +88,8 @@ namespace Articy.Hireathconcept.GlobalVariables
             variableNames.Add("Act1.NewVariable");
             variableNames.Add("Act1.MistressEmpath");
             variableNames.Add("Act1.RefuseBodyguard");
+            variableNames.Add("Act1.Lights");
+            variableNames.Add("Act1.Undress");
             variableNames.Add("ConvAssassin.Conversation1");
             variableNames.Add("ConvAssassin.ConvPoint11");
             variableNames.Add("ConvAssassin.ConvPoint12");
@@ -136,6 +142,7 @@ namespace Articy.Hireathconcept.GlobalVariables
             variableNames.Add("RelationshipAssassin.Ruthless");
             variableNames.Add("RelationshipAssassin.Affinity");
             variableNames.Add("RelationshipAssassin.Kiss");
+            variableNames.Add("RelationshipAssassin.Teased");
             variableNames.Add("RelationshipScorned.Idealist");
             variableNames.Add("RelationshipScorned.Ruthless");
             variableNames.Add("RelationshipScorned.Noble");
@@ -155,6 +162,7 @@ namespace Articy.Hireathconcept.GlobalVariables
             variableNames.Add("RelationshipMercenary.EverythingisManipulation");
             variableNames.Add("RelationshipMercenary.Honest");
             variableNames.Add("RelationshipMercenary.Kiss");
+            variableNames.Add("RelationshipMercenary.Seduction");
             variableNames.Add("RelationshipAdvisor.Flirtation");
             variableNames.Add("RelationshipAdvisor.Intimate");
             variableNames.Add("RelationshipAdvisor.Platonic");
@@ -170,6 +178,7 @@ namespace Articy.Hireathconcept.GlobalVariables
             variableNames.Add("RelationshipMistress.Ruthless");
             variableNames.Add("RelationshipMistress.Idealist");
             variableNames.Add("RelationshipMistress.Intimate");
+            variableNames.Add("ConvAdvisor.SpeakToEveryone");
             variableNames.Add("Backstory.Healer");
             variableNames.Add("Backstory.FriendHealer");
             variableNames.Add("RelationshipFriend.Noble");
@@ -252,6 +261,14 @@ namespace Articy.Hireathconcept.GlobalVariables
             }
         }
         
+        public ConvAdvisor ConvAdvisor
+        {
+            get
+            {
+                return mConvAdvisor;
+            }
+        }
+        
         public Backstory Backstory
         {
             get
@@ -295,6 +312,7 @@ namespace Articy.Hireathconcept.GlobalVariables
             RelationshipMercenary.RegisterVariables(this);
             RelationshipAdvisor.RegisterVariables(this);
             RelationshipMistress.RegisterVariables(this);
+            ConvAdvisor.RegisterVariables(this);
             Backstory.RegisterVariables(this);
             RelationshipFriend.RegisterVariables(this);
             ConvFriend.RegisterVariables(this);

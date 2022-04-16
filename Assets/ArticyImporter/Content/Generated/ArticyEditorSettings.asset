@@ -16,11 +16,11 @@ MonoBehaviour:
   mIsImporting: 0
   mAwaitingModelImport: 0
   mAwaitingFragmentsImport: 0
-  mLastUsedObjectDefinitionHash: C4E3C831B274F260799F30B59AB1834AA03CDFBE01D02B7949F801D1A82611A9
-  mLastUsedScriptFragmentsHash: 1040983384
+  mLastUsedObjectDefinitionHash: EE2DED554BAC2680CF83BDA0359F955F39FF5770F6894B205C5609C1A1234DFA
+  mLastUsedScriptFragmentsHash: 3181434314
   mLastUsedPackagesHash: 1187110788
   mLastUsedPackagesCount: 1
   mLastBuildCode: 1
-  mLastEditorStartupTimeTicks: 637852512420579505
+  mLastEditorStartupTimeTicks: 637856754966701921
   mNewVersionAvailable: 0
   mLastAttachedFlowPlayerValue: 0

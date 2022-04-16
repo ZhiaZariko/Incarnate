@@ -144,6 +144,32 @@ namespace Articy.Hireathconcept.GlobalVariables
             }
         }
         
+        // 
+        public bool Lights
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(9);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(9, value);
+            }
+        }
+        
+        // 
+        public bool Undress
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(10);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(10, value);
+            }
+        }
+        
         public void RegisterVariables(BaseGlobalVariables aStorage)
         {
             _VariableStorage = aStorage;
@@ -156,6 +182,8 @@ namespace Articy.Hireathconcept.GlobalVariables
             aStorage.RegisterVariable("Act1.NewVariable", false);
             aStorage.RegisterVariable("Act1.MistressEmpath", false);
             aStorage.RegisterVariable("Act1.RefuseBodyguard", false);
+            aStorage.RegisterVariable("Act1.Lights", false);
+            aStorage.RegisterVariable("Act1.Undress", false);
         }
     }
 }
@@ -176,32 +204,6 @@ namespace Articy.Hireathconcept.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(9);
-            }
-            set
-            {
-                _VariableStorage.Internal_SetVariableValueBoolean(9, value);
-            }
-        }
-        
-        // 
-        public bool ConvPoint11
-        {
-            get
-            {
-                return _VariableStorage.Internal_GetVariableValueBoolean(10);
-            }
-            set
-            {
-                _VariableStorage.Internal_SetVariableValueBoolean(10, value);
-            }
-        }
-        
-        // 
-        public bool ConvPoint12
-        {
-            get
-            {
                 return _VariableStorage.Internal_GetVariableValueBoolean(11);
             }
             set
@@ -211,7 +213,7 @@ namespace Articy.Hireathconcept.GlobalVariables
         }
         
         // 
-        public bool ConvPoint14
+        public bool ConvPoint11
         {
             get
             {
@@ -224,7 +226,7 @@ namespace Articy.Hireathconcept.GlobalVariables
         }
         
         // 
-        public bool ConvPoint13
+        public bool ConvPoint12
         {
             get
             {
@@ -236,8 +238,8 @@ namespace Articy.Hireathconcept.GlobalVariables
             }
         }
         
-        // Saviran has noted they like danger.
-        public bool LikeDanger
+        // 
+        public bool ConvPoint14
         {
             get
             {
@@ -249,8 +251,8 @@ namespace Articy.Hireathconcept.GlobalVariables
             }
         }
         
-        // Saviran has asked for the Assassin to bodyguard them.
-        public bool BodyguardRequest
+        // 
+        public bool ConvPoint13
         {
             get
             {
@@ -262,8 +264,8 @@ namespace Articy.Hireathconcept.GlobalVariables
             }
         }
         
-        // Saviran has started to flirt with the Assassin
-        public bool Flirtation
+        // Saviran has noted they like danger.
+        public bool LikeDanger
         {
             get
             {
@@ -275,8 +277,8 @@ namespace Articy.Hireathconcept.GlobalVariables
             }
         }
         
-        // 
-        public bool Conv3Why
+        // Saviran has asked for the Assassin to bodyguard them.
+        public bool BodyguardRequest
         {
             get
             {
@@ -288,8 +290,8 @@ namespace Articy.Hireathconcept.GlobalVariables
             }
         }
         
-        // 
-        public bool ConvoPoint31
+        // Saviran has started to flirt with the Assassin
+        public bool Flirtation
         {
             get
             {
@@ -302,7 +304,7 @@ namespace Articy.Hireathconcept.GlobalVariables
         }
         
         // 
-        public bool Spawn
+        public bool Conv3Why
         {
             get
             {
@@ -315,7 +317,7 @@ namespace Articy.Hireathconcept.GlobalVariables
         }
         
         // 
-        public bool Wantthosethings
+        public bool ConvoPoint31
         {
             get
             {
@@ -328,7 +330,7 @@ namespace Articy.Hireathconcept.GlobalVariables
         }
         
         // 
-        public bool Goodtime
+        public bool Spawn
         {
             get
             {
@@ -341,7 +343,7 @@ namespace Articy.Hireathconcept.GlobalVariables
         }
         
         // 
-        public bool Bond
+        public bool Wantthosethings
         {
             get
             {
@@ -354,7 +356,7 @@ namespace Articy.Hireathconcept.GlobalVariables
         }
         
         // 
-        public bool Patient
+        public bool Goodtime
         {
             get
             {
@@ -367,7 +369,7 @@ namespace Articy.Hireathconcept.GlobalVariables
         }
         
         // 
-        public bool QuickReputation
+        public bool Bond
         {
             get
             {
@@ -379,8 +381,8 @@ namespace Articy.Hireathconcept.GlobalVariables
             }
         }
         
-        // The Assassin has been unchained.
-        public bool Unchained
+        // 
+        public bool Patient
         {
             get
             {
@@ -392,8 +394,8 @@ namespace Articy.Hireathconcept.GlobalVariables
             }
         }
         
-        // Saviran opted to sleep on the floor.
-        public bool Floor
+        // 
+        public bool QuickReputation
         {
             get
             {
@@ -405,8 +407,8 @@ namespace Articy.Hireathconcept.GlobalVariables
             }
         }
         
-        // Saviran got up after Frost hurt them.
-        public bool Getup
+        // The Assassin has been unchained.
+        public bool Unchained
         {
             get
             {
@@ -418,8 +420,8 @@ namespace Articy.Hireathconcept.GlobalVariables
             }
         }
         
-        // 
-        public bool Convo12
+        // Saviran opted to sleep on the floor.
+        public bool Floor
         {
             get
             {
@@ -431,8 +433,8 @@ namespace Articy.Hireathconcept.GlobalVariables
             }
         }
         
-        // 
-        public bool Conversation2
+        // Saviran got up after Frost hurt them.
+        public bool Getup
         {
             get
             {
@@ -445,7 +447,7 @@ namespace Articy.Hireathconcept.GlobalVariables
         }
         
         // 
-        public bool Leaving
+        public bool Convo12
         {
             get
             {
@@ -458,7 +460,7 @@ namespace Articy.Hireathconcept.GlobalVariables
         }
         
         // 
-        public bool WorkOn
+        public bool Conversation2
         {
             get
             {
@@ -467,6 +469,32 @@ namespace Articy.Hireathconcept.GlobalVariables
             set
             {
                 _VariableStorage.Internal_SetVariableValueBoolean(31, value);
+            }
+        }
+        
+        // 
+        public bool Leaving
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(32);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(32, value);
+            }
+        }
+        
+        // 
+        public bool WorkOn
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(33);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(33, value);
             }
         }
         
@@ -516,32 +544,6 @@ namespace Articy.Hireathconcept.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(32);
-            }
-            set
-            {
-                _VariableStorage.Internal_SetVariableValueBoolean(32, value);
-            }
-        }
-        
-        // Saviran has spoken to the Mercenary
-        public bool Conversation1
-        {
-            get
-            {
-                return _VariableStorage.Internal_GetVariableValueBoolean(33);
-            }
-            set
-            {
-                _VariableStorage.Internal_SetVariableValueBoolean(33, value);
-            }
-        }
-        
-        // Saviran has started to flirt with the Mercenary
-        public bool Flirtation
-        {
-            get
-            {
                 return _VariableStorage.Internal_GetVariableValueBoolean(34);
             }
             set
@@ -550,8 +552,8 @@ namespace Articy.Hireathconcept.GlobalVariables
             }
         }
         
-        // 
-        public bool Bond
+        // Saviran has spoken to the Mercenary
+        public bool Conversation1
         {
             get
             {
@@ -563,8 +565,8 @@ namespace Articy.Hireathconcept.GlobalVariables
             }
         }
         
-        // 
-        public bool Wantthosethings
+        // Saviran has started to flirt with the Mercenary
+        public bool Flirtation
         {
             get
             {
@@ -577,7 +579,7 @@ namespace Articy.Hireathconcept.GlobalVariables
         }
         
         // 
-        public bool NoDecisionYet
+        public bool Bond
         {
             get
             {
@@ -590,7 +592,7 @@ namespace Articy.Hireathconcept.GlobalVariables
         }
         
         // 
-        public bool AskedAssassin
+        public bool Wantthosethings
         {
             get
             {
@@ -603,7 +605,7 @@ namespace Articy.Hireathconcept.GlobalVariables
         }
         
         // 
-        public bool AskedScorned
+        public bool NoDecisionYet
         {
             get
             {
@@ -616,7 +618,7 @@ namespace Articy.Hireathconcept.GlobalVariables
         }
         
         // 
-        public bool ScornedQ
+        public bool AskedAssassin
         {
             get
             {
@@ -629,7 +631,7 @@ namespace Articy.Hireathconcept.GlobalVariables
         }
         
         // 
-        public bool AssassinQ
+        public bool AskedScorned
         {
             get
             {
@@ -642,7 +644,7 @@ namespace Articy.Hireathconcept.GlobalVariables
         }
         
         // 
-        public bool InThePit
+        public bool ScornedQ
         {
             get
             {
@@ -654,8 +656,8 @@ namespace Articy.Hireathconcept.GlobalVariables
             }
         }
         
-        // Vaelyn has mentioned she needs to repair her reputation.
-        public bool BuildReputation
+        // 
+        public bool AssassinQ
         {
             get
             {
@@ -668,7 +670,7 @@ namespace Articy.Hireathconcept.GlobalVariables
         }
         
         // 
-        public bool Leaving
+        public bool InThePit
         {
             get
             {
@@ -680,8 +682,8 @@ namespace Articy.Hireathconcept.GlobalVariables
             }
         }
         
-        // 
-        public bool Conversation2
+        // Vaelyn has mentioned she needs to repair her reputation.
+        public bool BuildReputation
         {
             get
             {
@@ -690,6 +692,32 @@ namespace Articy.Hireathconcept.GlobalVariables
             set
             {
                 _VariableStorage.Internal_SetVariableValueBoolean(45, value);
+            }
+        }
+        
+        // 
+        public bool Leaving
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(46);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(46, value);
+            }
+        }
+        
+        // 
+        public bool Conversation2
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(47);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(47, value);
             }
         }
         
@@ -730,32 +758,6 @@ namespace Articy.Hireathconcept.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(46);
-            }
-            set
-            {
-                _VariableStorage.Internal_SetVariableValueBoolean(46, value);
-            }
-        }
-        
-        // 
-        public bool Convo1End
-        {
-            get
-            {
-                return _VariableStorage.Internal_GetVariableValueBoolean(47);
-            }
-            set
-            {
-                _VariableStorage.Internal_SetVariableValueBoolean(47, value);
-            }
-        }
-        
-        // Saviran has started to flirt with the Scorned
-        public bool Flirtation
-        {
-            get
-            {
                 return _VariableStorage.Internal_GetVariableValueBoolean(48);
             }
             set
@@ -765,7 +767,7 @@ namespace Articy.Hireathconcept.GlobalVariables
         }
         
         // 
-        public bool Forging
+        public bool Convo1End
         {
             get
             {
@@ -777,8 +779,8 @@ namespace Articy.Hireathconcept.GlobalVariables
             }
         }
         
-        // 
-        public bool Leaving
+        // Saviran has started to flirt with the Scorned
+        public bool Flirtation
         {
             get
             {
@@ -791,7 +793,7 @@ namespace Articy.Hireathconcept.GlobalVariables
         }
         
         // 
-        public bool Conversation2
+        public bool Forging
         {
             get
             {
@@ -804,7 +806,7 @@ namespace Articy.Hireathconcept.GlobalVariables
         }
         
         // 
-        public bool Facecovered
+        public bool Leaving
         {
             get
             {
@@ -813,6 +815,32 @@ namespace Articy.Hireathconcept.GlobalVariables
             set
             {
                 _VariableStorage.Internal_SetVariableValueBoolean(52, value);
+            }
+        }
+        
+        // 
+        public bool Conversation2
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(53);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(53, value);
+            }
+        }
+        
+        // 
+        public bool Facecovered
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(54);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(54, value);
             }
         }
         
@@ -846,11 +874,11 @@ namespace Articy.Hireathconcept.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(53);
+                return _VariableStorage.Internal_GetVariableValueBoolean(55);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(53, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(55, value);
             }
         }
         
@@ -859,11 +887,11 @@ namespace Articy.Hireathconcept.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(54);
+                return _VariableStorage.Internal_GetVariableValueBoolean(56);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(54, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(56, value);
             }
         }
         
@@ -872,11 +900,11 @@ namespace Articy.Hireathconcept.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(55);
+                return _VariableStorage.Internal_GetVariableValueBoolean(57);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(55, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(57, value);
             }
         }
         
@@ -937,11 +965,24 @@ namespace Articy.Hireathconcept.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(56);
+                return _VariableStorage.Internal_GetVariableValueBoolean(58);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(56, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(58, value);
+            }
+        }
+        
+        // 
+        public bool Teased
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(59);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(59, value);
             }
         }
         
@@ -956,6 +997,7 @@ namespace Articy.Hireathconcept.GlobalVariables
             aStorage.RegisterVariable("RelationshipAssassin.Ruthless", 0);
             aStorage.RegisterVariable("RelationshipAssassin.Affinity", 0);
             aStorage.RegisterVariable("RelationshipAssassin.Kiss", false);
+            aStorage.RegisterVariable("RelationshipAssassin.Teased", false);
         }
     }
 }
@@ -1015,11 +1057,11 @@ namespace Articy.Hireathconcept.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(57);
+                return _VariableStorage.Internal_GetVariableValueBoolean(60);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(57, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(60, value);
             }
         }
         
@@ -1028,11 +1070,11 @@ namespace Articy.Hireathconcept.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(58);
+                return _VariableStorage.Internal_GetVariableValueBoolean(61);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(58, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(61, value);
             }
         }
         
@@ -1041,11 +1083,11 @@ namespace Articy.Hireathconcept.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(59);
+                return _VariableStorage.Internal_GetVariableValueBoolean(62);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(59, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(62, value);
             }
         }
         
@@ -1067,11 +1109,11 @@ namespace Articy.Hireathconcept.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(60);
+                return _VariableStorage.Internal_GetVariableValueBoolean(63);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(60, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(63, value);
             }
         }
         
@@ -1080,11 +1122,11 @@ namespace Articy.Hireathconcept.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(61);
+                return _VariableStorage.Internal_GetVariableValueBoolean(64);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(61, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(64, value);
             }
         }
         
@@ -1120,11 +1162,11 @@ namespace Articy.Hireathconcept.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(62);
+                return _VariableStorage.Internal_GetVariableValueBoolean(65);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(62, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(65, value);
             }
         }
         
@@ -1133,11 +1175,11 @@ namespace Articy.Hireathconcept.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(63);
+                return _VariableStorage.Internal_GetVariableValueBoolean(66);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(63, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(66, value);
             }
         }
         
@@ -1146,11 +1188,11 @@ namespace Articy.Hireathconcept.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(64);
+                return _VariableStorage.Internal_GetVariableValueBoolean(67);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(64, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(67, value);
             }
         }
         
@@ -1211,11 +1253,11 @@ namespace Articy.Hireathconcept.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(65);
+                return _VariableStorage.Internal_GetVariableValueBoolean(68);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(65, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(68, value);
             }
         }
         
@@ -1224,11 +1266,11 @@ namespace Articy.Hireathconcept.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(66);
+                return _VariableStorage.Internal_GetVariableValueBoolean(69);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(66, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(69, value);
             }
         }
         
@@ -1237,11 +1279,24 @@ namespace Articy.Hireathconcept.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(67);
+                return _VariableStorage.Internal_GetVariableValueBoolean(70);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(67, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(70, value);
+            }
+        }
+        
+        // Saviran has asked for a seduction
+        public bool Seduction
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(71);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(71, value);
             }
         }
         
@@ -1258,6 +1313,7 @@ namespace Articy.Hireathconcept.GlobalVariables
             aStorage.RegisterVariable("RelationshipMercenary.EverythingisManipulation", false);
             aStorage.RegisterVariable("RelationshipMercenary.Honest", false);
             aStorage.RegisterVariable("RelationshipMercenary.Kiss", false);
+            aStorage.RegisterVariable("RelationshipMercenary.Seduction", false);
         }
     }
 }
@@ -1278,11 +1334,11 @@ namespace Articy.Hireathconcept.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(68);
+                return _VariableStorage.Internal_GetVariableValueBoolean(72);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(68, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(72, value);
             }
         }
         
@@ -1291,11 +1347,11 @@ namespace Articy.Hireathconcept.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(69);
+                return _VariableStorage.Internal_GetVariableValueBoolean(73);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(69, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(73, value);
             }
         }
         
@@ -1304,11 +1360,11 @@ namespace Articy.Hireathconcept.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(70);
+                return _VariableStorage.Internal_GetVariableValueBoolean(74);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(70, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(74, value);
             }
         }
         
@@ -1369,11 +1425,11 @@ namespace Articy.Hireathconcept.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(71);
+                return _VariableStorage.Internal_GetVariableValueBoolean(75);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(71, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(75, value);
             }
         }
         
@@ -1421,11 +1477,11 @@ namespace Articy.Hireathconcept.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(72);
+                return _VariableStorage.Internal_GetVariableValueBoolean(76);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(72, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(76, value);
             }
         }
         
@@ -1434,11 +1490,11 @@ namespace Articy.Hireathconcept.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(73);
+                return _VariableStorage.Internal_GetVariableValueBoolean(77);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(73, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(77, value);
             }
         }
         
@@ -1486,11 +1542,11 @@ namespace Articy.Hireathconcept.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(74);
+                return _VariableStorage.Internal_GetVariableValueBoolean(78);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(74, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(78, value);
             }
         }
         
@@ -1511,6 +1567,38 @@ namespace Articy.Hireathconcept.GlobalVariables
 {
     
     
+    // Advisor Conversational Trackers  Used to track narrative points within dialogue as distinct from releationship checks.
+    [Serializable()]
+    public class ConvAdvisor : IArticyNamespace
+    {
+        
+        [SerializeField()]
+        private BaseGlobalVariables _VariableStorage;
+        
+        // 
+        public bool SpeakToEveryone
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(79);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(79, value);
+            }
+        }
+        
+        public void RegisterVariables(BaseGlobalVariables aStorage)
+        {
+            _VariableStorage = aStorage;
+            aStorage.RegisterVariable("ConvAdvisor.SpeakToEveryone", false);
+        }
+    }
+}
+namespace Articy.Hireathconcept.GlobalVariables
+{
+    
+    
     // Saviran Backstory Trackers
     [Serializable()]
     public class Backstory : IArticyNamespace
@@ -1524,11 +1612,11 @@ namespace Articy.Hireathconcept.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(75);
+                return _VariableStorage.Internal_GetVariableValueBoolean(80);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(75, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(80, value);
             }
         }
         
@@ -1537,11 +1625,11 @@ namespace Articy.Hireathconcept.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(76);
+                return _VariableStorage.Internal_GetVariableValueBoolean(81);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(76, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(81, value);
             }
         }
         
@@ -1630,11 +1718,11 @@ namespace Articy.Hireathconcept.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(77);
+                return _VariableStorage.Internal_GetVariableValueBoolean(82);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(77, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(82, value);
             }
         }
         
@@ -1643,11 +1731,11 @@ namespace Articy.Hireathconcept.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(78);
+                return _VariableStorage.Internal_GetVariableValueBoolean(83);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(78, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(83, value);
             }
         }
         
