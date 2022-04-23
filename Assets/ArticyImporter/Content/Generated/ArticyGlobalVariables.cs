@@ -106,7 +106,6 @@ namespace Articy.Hireathconcept.GlobalVariables
             variableNames.Add("ConvAssassin.Bond");
             variableNames.Add("ConvAssassin.Patient");
             variableNames.Add("ConvAssassin.QuickReputation");
-            variableNames.Add("ConvAssassin.Unchained");
             variableNames.Add("ConvAssassin.Floor");
             variableNames.Add("ConvAssassin.Getup");
             variableNames.Add("ConvAssassin.Convo12");
@@ -143,6 +142,7 @@ namespace Articy.Hireathconcept.GlobalVariables
             variableNames.Add("RelationshipAssassin.Affinity");
             variableNames.Add("RelationshipAssassin.Kiss");
             variableNames.Add("RelationshipAssassin.Teased");
+            variableNames.Add("RelationshipAssassin.Unchained");
             variableNames.Add("RelationshipScorned.Idealist");
             variableNames.Add("RelationshipScorned.Ruthless");
             variableNames.Add("RelationshipScorned.Noble");

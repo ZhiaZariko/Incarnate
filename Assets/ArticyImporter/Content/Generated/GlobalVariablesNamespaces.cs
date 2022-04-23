@@ -407,8 +407,8 @@ namespace Articy.Hireathconcept.GlobalVariables
             }
         }
         
-        // The Assassin has been unchained.
-        public bool Unchained
+        // Saviran opted to sleep on the floor.
+        public bool Floor
         {
             get
             {
@@ -420,8 +420,8 @@ namespace Articy.Hireathconcept.GlobalVariables
             }
         }
         
-        // Saviran opted to sleep on the floor.
-        public bool Floor
+        // Saviran got up after Frost hurt them.
+        public bool Getup
         {
             get
             {
@@ -433,8 +433,8 @@ namespace Articy.Hireathconcept.GlobalVariables
             }
         }
         
-        // Saviran got up after Frost hurt them.
-        public bool Getup
+        // 
+        public bool Convo12
         {
             get
             {
@@ -447,7 +447,7 @@ namespace Articy.Hireathconcept.GlobalVariables
         }
         
         // 
-        public bool Convo12
+        public bool Conversation2
         {
             get
             {
@@ -460,7 +460,7 @@ namespace Articy.Hireathconcept.GlobalVariables
         }
         
         // 
-        public bool Conversation2
+        public bool Leaving
         {
             get
             {
@@ -473,7 +473,7 @@ namespace Articy.Hireathconcept.GlobalVariables
         }
         
         // 
-        public bool Leaving
+        public bool WorkOn
         {
             get
             {
@@ -482,19 +482,6 @@ namespace Articy.Hireathconcept.GlobalVariables
             set
             {
                 _VariableStorage.Internal_SetVariableValueBoolean(32, value);
-            }
-        }
-        
-        // 
-        public bool WorkOn
-        {
-            get
-            {
-                return _VariableStorage.Internal_GetVariableValueBoolean(33);
-            }
-            set
-            {
-                _VariableStorage.Internal_SetVariableValueBoolean(33, value);
             }
         }
         
@@ -517,7 +504,6 @@ namespace Articy.Hireathconcept.GlobalVariables
             aStorage.RegisterVariable("ConvAssassin.Bond", false);
             aStorage.RegisterVariable("ConvAssassin.Patient", false);
             aStorage.RegisterVariable("ConvAssassin.QuickReputation", false);
-            aStorage.RegisterVariable("ConvAssassin.Unchained", false);
             aStorage.RegisterVariable("ConvAssassin.Floor", false);
             aStorage.RegisterVariable("ConvAssassin.Getup", false);
             aStorage.RegisterVariable("ConvAssassin.Convo12", false);
@@ -544,6 +530,19 @@ namespace Articy.Hireathconcept.GlobalVariables
         {
             get
             {
+                return _VariableStorage.Internal_GetVariableValueBoolean(33);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(33, value);
+            }
+        }
+        
+        // Saviran has spoken to the Mercenary
+        public bool Conversation1
+        {
+            get
+            {
                 return _VariableStorage.Internal_GetVariableValueBoolean(34);
             }
             set
@@ -552,8 +551,8 @@ namespace Articy.Hireathconcept.GlobalVariables
             }
         }
         
-        // Saviran has spoken to the Mercenary
-        public bool Conversation1
+        // Saviran has started to flirt with the Mercenary
+        public bool Flirtation
         {
             get
             {
@@ -565,8 +564,8 @@ namespace Articy.Hireathconcept.GlobalVariables
             }
         }
         
-        // Saviran has started to flirt with the Mercenary
-        public bool Flirtation
+        // 
+        public bool Bond
         {
             get
             {
@@ -579,7 +578,7 @@ namespace Articy.Hireathconcept.GlobalVariables
         }
         
         // 
-        public bool Bond
+        public bool Wantthosethings
         {
             get
             {
@@ -592,7 +591,7 @@ namespace Articy.Hireathconcept.GlobalVariables
         }
         
         // 
-        public bool Wantthosethings
+        public bool NoDecisionYet
         {
             get
             {
@@ -605,7 +604,7 @@ namespace Articy.Hireathconcept.GlobalVariables
         }
         
         // 
-        public bool NoDecisionYet
+        public bool AskedAssassin
         {
             get
             {
@@ -618,7 +617,7 @@ namespace Articy.Hireathconcept.GlobalVariables
         }
         
         // 
-        public bool AskedAssassin
+        public bool AskedScorned
         {
             get
             {
@@ -631,7 +630,7 @@ namespace Articy.Hireathconcept.GlobalVariables
         }
         
         // 
-        public bool AskedScorned
+        public bool ScornedQ
         {
             get
             {
@@ -644,7 +643,7 @@ namespace Articy.Hireathconcept.GlobalVariables
         }
         
         // 
-        public bool ScornedQ
+        public bool AssassinQ
         {
             get
             {
@@ -657,7 +656,7 @@ namespace Articy.Hireathconcept.GlobalVariables
         }
         
         // 
-        public bool AssassinQ
+        public bool InThePit
         {
             get
             {
@@ -669,8 +668,8 @@ namespace Articy.Hireathconcept.GlobalVariables
             }
         }
         
-        // 
-        public bool InThePit
+        // Vaelyn has mentioned she needs to repair her reputation.
+        public bool BuildReputation
         {
             get
             {
@@ -682,8 +681,8 @@ namespace Articy.Hireathconcept.GlobalVariables
             }
         }
         
-        // Vaelyn has mentioned she needs to repair her reputation.
-        public bool BuildReputation
+        // 
+        public bool Leaving
         {
             get
             {
@@ -696,7 +695,7 @@ namespace Articy.Hireathconcept.GlobalVariables
         }
         
         // 
-        public bool Leaving
+        public bool Conversation2
         {
             get
             {
@@ -705,19 +704,6 @@ namespace Articy.Hireathconcept.GlobalVariables
             set
             {
                 _VariableStorage.Internal_SetVariableValueBoolean(46, value);
-            }
-        }
-        
-        // 
-        public bool Conversation2
-        {
-            get
-            {
-                return _VariableStorage.Internal_GetVariableValueBoolean(47);
-            }
-            set
-            {
-                _VariableStorage.Internal_SetVariableValueBoolean(47, value);
             }
         }
         
@@ -758,6 +744,19 @@ namespace Articy.Hireathconcept.GlobalVariables
         {
             get
             {
+                return _VariableStorage.Internal_GetVariableValueBoolean(47);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(47, value);
+            }
+        }
+        
+        // 
+        public bool Convo1End
+        {
+            get
+            {
                 return _VariableStorage.Internal_GetVariableValueBoolean(48);
             }
             set
@@ -766,8 +765,8 @@ namespace Articy.Hireathconcept.GlobalVariables
             }
         }
         
-        // 
-        public bool Convo1End
+        // Saviran has started to flirt with the Scorned
+        public bool Flirtation
         {
             get
             {
@@ -779,8 +778,8 @@ namespace Articy.Hireathconcept.GlobalVariables
             }
         }
         
-        // Saviran has started to flirt with the Scorned
-        public bool Flirtation
+        // 
+        public bool Forging
         {
             get
             {
@@ -793,7 +792,7 @@ namespace Articy.Hireathconcept.GlobalVariables
         }
         
         // 
-        public bool Forging
+        public bool Leaving
         {
             get
             {
@@ -806,7 +805,7 @@ namespace Articy.Hireathconcept.GlobalVariables
         }
         
         // 
-        public bool Leaving
+        public bool Conversation2
         {
             get
             {
@@ -819,7 +818,7 @@ namespace Articy.Hireathconcept.GlobalVariables
         }
         
         // 
-        public bool Conversation2
+        public bool Facecovered
         {
             get
             {
@@ -828,19 +827,6 @@ namespace Articy.Hireathconcept.GlobalVariables
             set
             {
                 _VariableStorage.Internal_SetVariableValueBoolean(53, value);
-            }
-        }
-        
-        // 
-        public bool Facecovered
-        {
-            get
-            {
-                return _VariableStorage.Internal_GetVariableValueBoolean(54);
-            }
-            set
-            {
-                _VariableStorage.Internal_SetVariableValueBoolean(54, value);
             }
         }
         
@@ -874,11 +860,11 @@ namespace Articy.Hireathconcept.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(55);
+                return _VariableStorage.Internal_GetVariableValueBoolean(54);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(55, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(54, value);
             }
         }
         
@@ -887,11 +873,11 @@ namespace Articy.Hireathconcept.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(56);
+                return _VariableStorage.Internal_GetVariableValueBoolean(55);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(56, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(55, value);
             }
         }
         
@@ -900,11 +886,11 @@ namespace Articy.Hireathconcept.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(57);
+                return _VariableStorage.Internal_GetVariableValueBoolean(56);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(57, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(56, value);
             }
         }
         
@@ -965,6 +951,19 @@ namespace Articy.Hireathconcept.GlobalVariables
         {
             get
             {
+                return _VariableStorage.Internal_GetVariableValueBoolean(57);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(57, value);
+            }
+        }
+        
+        // 
+        public bool Teased
+        {
+            get
+            {
                 return _VariableStorage.Internal_GetVariableValueBoolean(58);
             }
             set
@@ -973,8 +972,8 @@ namespace Articy.Hireathconcept.GlobalVariables
             }
         }
         
-        // 
-        public bool Teased
+        // The Assassin has been unchained.
+        public bool Unchained
         {
             get
             {
@@ -998,6 +997,7 @@ namespace Articy.Hireathconcept.GlobalVariables
             aStorage.RegisterVariable("RelationshipAssassin.Affinity", 0);
             aStorage.RegisterVariable("RelationshipAssassin.Kiss", false);
             aStorage.RegisterVariable("RelationshipAssassin.Teased", false);
+            aStorage.RegisterVariable("RelationshipAssassin.Unchained", false);
         }
     }
 }
